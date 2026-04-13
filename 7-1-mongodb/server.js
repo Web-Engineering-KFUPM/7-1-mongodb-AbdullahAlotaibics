@@ -187,7 +187,9 @@
 // import mongoose
 import mongoose from "mongoose";
 // establish connection
-
+const connectionString = "mongodb+srv://abdullah:<db_password>@cluster0.p3rper7.mongodb.net/";
+await mongoose.connect(connectionString);
+console.log("✅ Connected to MongoDB");
 
 // define schema
 const studentSchema = new mongoose.Schema({
